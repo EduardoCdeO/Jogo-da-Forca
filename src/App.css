@@ -40,3 +40,25 @@
 .read-the-docs {
   color: #888;
 }
+
+h1 {
+  margin-top: 0;
+  color: ghostwhite;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h2.red {
+  color: rgb(252, 20, 20);
+}
+
+h2.green {
+  color: rgb(3, 190, 3);
+}
+
+p {
+  position: relative;
+  bottom: 75px;
+}
