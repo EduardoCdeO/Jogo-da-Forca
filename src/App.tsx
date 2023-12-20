@@ -19,7 +19,30 @@ const HangmanPart = styled.div`
   width: 375px;
 `
 
-const words = ['exemplo', 'teste', 'desenvolvimento']
+const words = ['amor', 'abstrato', 'alegria', 'autonomia', 'amizade', 'analisar', 'atemporal', 'analogia',
+ 'buscar', 'beleza', 'brincadeira', 'burocracia', 'bastante', 'biodiversidade', 'bola', 'brasil',
+ 'casual', 'conhecer', 'complexo', 'compartilhar', 'convencional', 'conhecimento', 'cumprimento', 'credibilidade',
+ 'desenvolvimento', 'desafio', 'dignidade', 'definir', 'demanda', 'democracia', 'desejo', 'disciplina',
+ 'empatia', 'essencial', 'expectativa', 'excepcional', 'excelente', 'estagnado', 'estabelecer', 'emergente',
+ 'finalidade', 'fidelidade', 'feliz', 'fluxo', 'fundamental', 'facultativo', 'fortaleza', 'frio',
+ 'generalizar', 'grandeza', 'girassol', 'guardar', 'geografia', 'garantir', 'generosidade', 'gratuito',
+ 'hegemonia', 'humildade', 'honestidade', 'humor', 'habilidade', 'honra', 'habitual', 'hostil',
+ 'incidente', 'independente', 'inconveniente', 'inusitado', 'importante', 'impactar', 'intenso', 'interesse',
+ 'julgamento', 'justificar', 'jovem', 'jornal', 'jardim', 'jantar', 'jogar', 'janela',
+ 'kiwi', 'ketchup', 'kilo',
+ 'legado', 'liberdade', 'limite', 'lugar', 'litoral', 'levar', 'literalmente', 'linda',
+ 'maturidade', 'maestria', 'modesto', 'melhor', 'maravilhoso', 'magnitude', 'malhar', 'mudar',
+ 'normal', 'nenhuma', 'narrativa', 'nobreza', 'natureza', 'nacionalidade', 'noite', 'nomenclatura',
+ 'orgulho', 'objetivo', 'oportunidade', 'otimizar', 'obrigado', 'oferecer', 'original', 'origem',
+ 'perspectiva', 'paradigma', 'parcial', 'problema', 'processo', 'piedade', 'paralelo', 'palavra',
+ 'qualidade', 'quesito', 'quantidade', 'questionamento', 'quantificar', 'queijo', 'quadro', 'quebrado',
+ 'respeito', 'relativo', 'reivindicar', 'rotina', 'relacionamento', 'restringir', 'responsabilidade', 'radical',
+ 'significado', 'subestimar', 'solidariedade', 'superficial', 'sensatez', 'sentido', 'saudade', 'substantivo',
+ 'termo', 'transformar', 'tecnologia', 'trazer', 'tempestade', 'tristeza', 'talento', 'tempo',
+ 'utopia', 'utilizar', 'uniforme', 'urbano', 'ultimato', 'unidade', 'unir', 'urgente',
+ 'visualizar', 'vaidade', 'vergonha', 'valorizar', 'virtual', 'verificar', 'voltar', 'verbo',
+ 'xingar', 'xadrez', 'xerox', 'xeretar', 'xarope', 'xaveco',
+ 'zebra', 'zona', 'zangado', 'zombar', 'zelador', 'zoeira', 'zero', 'zumbi',]
 
 function App() {
   const [wordToGuess, setWordToGuess] = useState(() => {
@@ -61,11 +84,11 @@ function App() {
   return (
     <Wrapper>
       <HangmanPart>
+        <h1>Jogo da Forca</h1>
         {isLoser && <h2 className='red'>Você perdeu!</h2>}
         {isLoser && <p>Atualize a página para jogar novamente.</p>}
-        {isWinner && <h2 className='green'>Você ganhou!</h2>}
+        {isWinner && <h2 className='green'>Parabéns, você ganhou!</h2>}
         {isWinner && <p>Atualize a página para jogar novamente.</p>}
-        <h1>Jogo da Forca</h1>
         <HangmanDrawing numberOfGuesses={incorrectGuesses.length} />
         <HangmanWord reveal={isLoser} guessedLetters={guessedLetters} word={wordToGuess} />
       </HangmanPart>
