@@ -45,7 +45,7 @@ const words = ['amor', 'abstrato', 'alegria', 'autonomia', 'amizade', 'analisar'
  'zebra', 'zona', 'zangado', 'zombar', 'zelador', 'zoeira', 'zero', 'zumbi',]
 
 function App() {
-  const [wordToGuess, setWordToGuess] = useState(() => {
+  const [wordToGuess] = useState(() => {
     return words[Math.floor(Math.random() * words.length)]
   })
 
@@ -102,4 +102,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
